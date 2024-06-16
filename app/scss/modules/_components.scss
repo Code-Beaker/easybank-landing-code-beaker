@@ -1,0 +1,40 @@
+@mixin navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+@mixin navlink($color, $wght, $size, $hover) {
+  text-decoration: none;
+  font-weight: $wght;
+  color: $color;
+  padding: 1rem;
+  font-size: $size;
+  outline-offset: 0.125rem;
+  display: block;
+  transition: 150ms ease;
+}
+
+@mixin button($color, $bg, $size, $weight) {
+  display: block;
+  color: $color;
+  min-width: fit-content;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+  background: $bg;
+  font-weight: $weight;
+  transition: 150ms ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    scale: 0.985;
+    opacity: 1;
+  }
+}

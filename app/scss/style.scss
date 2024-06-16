@@ -1,0 +1,68 @@
+@use "./modules/" as m;
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+// navbar
+.navbar {
+  @include m.navbar;
+  background-color: m.color(neutral__white);
+
+  #{&}__links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #{&}__link {
+    @include m.navlink(
+      m.color(primary__dark-blue),
+      m.weight(regular),
+      var(--step--1),
+      m.color(neutral__grayish-blue)
+    );
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      scale: 0 1;
+      height: 5px;
+      transform-origin: left;
+      border-radius: 1rem;
+      background: linear-gradient(
+        45deg,
+        m.color(primary__lime-green),
+        m.color(primary__bright-cyan)
+      );
+      transition: 150ms ease;
+    }
+
+    &:hover {
+      opacity: 0.75;
+
+      &::after {
+        scale: 1;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  @include m.button(
+    m.color(neutral__white),
+    linear-gradient(
+      45deg,
+      m.color(primary__lime-green),
+      m.color(primary__bright-cyan)
+    ),
+    var(--step--1),
+    m.weight(bold)
+  );
+}
