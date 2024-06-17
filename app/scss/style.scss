@@ -152,3 +152,53 @@ body {
     color: m.color(neutral__grayish-blue);
   }
 }
+
+// ARTICLES
+.articles {
+  padding: 5rem 3rem;
+  background-color: #fafafa;
+
+  #{&}__article__item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: m.color(neutral__white);
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / 3;
+    transition: 0.125s ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+      box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  #{&}__heading {
+    font-size: var(--step-3);
+    color: m.color(primary__dark-blue);
+    margin-bottom: 3rem;
+  }
+
+  #{&}__article__text-content {
+    padding: 1rem;
+  }
+
+  #{&}__article__author {
+    font-size: var(--step--2);
+    color: m.color(neutral__grayish-blue);
+    margin-block: 0.5rem;
+  }
+
+  #{&}__article__heading {
+    color: m.color(primary__dark-blue);
+    font-size: var(--step-0);
+    margin-bottom: 0.5rem;
+  }
+
+  #{&}__article__text {
+    color: m.color(neutral__grayish-blue);
+    font-size: var(--step--1);
+  }
+}
