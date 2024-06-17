@@ -9,6 +9,7 @@ body {
 .navbar {
   @include m.navbar;
   background-color: m.color(neutral__white);
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.2);
 
   #{&}__links {
     display: flex;
@@ -65,4 +66,45 @@ body {
     var(--step--1),
     m.weight(bold)
   );
+}
+
+// Hero
+.hero {
+  #{&}__text-content {
+    padding: 5rem;
+  }
+
+  #{&}__heading {
+    font-size: var(--step-4);
+    color: m.color(primary__dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  #{&}__text {
+    color: m.color(neutral__grayish-blue);
+    font-size: var(--step--1);
+    margin-bottom: 1.5rem;
+  }
+
+  #{&}__btn {
+    display: inline-block;
+  }
+
+  #{&}__image-wrapper {
+    position: relative;
+  }
+
+  #{&}__pattern {
+    position: absolute;
+    z-index: -1;
+    width: 75rem;
+    top: 0;
+    right: 0;
+  }
+
+  #{&}__image {
+    position: absolute;
+    top: -25%;
+    z-index: -1;
+  }
 }
