@@ -222,3 +222,63 @@ body {
     font-size: var(--step--1);
   }
 }
+
+// FOOTER
+.footer {
+  background-color: m.color(primary__dark-blue);
+  padding: 4rem;
+
+  #{&}__logo {
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+
+  #{&}__social-icons {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    align-items: center;
+  }
+
+  #{&}__social-icon {
+    transition: 0.125s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  #{&}__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  #{&}__link {
+    @include m.navlink(
+      m.color(neutral__white),
+      m.weight(regular),
+      var(--step--1),
+      m.color(neutral__grayish-blue)
+    );
+    padding: 0.15rem;
+
+    &:hover {
+      color: m.color(neutral__grayish-blue);
+    }
+  }
+
+  #{&}__btn-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  #{&}__copy {
+    margin-top: 3rem;
+    color: m.color(neutral__grayish-blue);
+    text-align: right;
+  }
+}

@@ -19,6 +19,7 @@
 @mixin button($color, $bg, $size, $weight) {
   display: block;
   color: $color;
+  text-transform: capitalize;
   min-width: fit-content;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
