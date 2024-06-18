@@ -16,7 +16,7 @@
   transition: 150ms ease;
 }
 
-@mixin button($color, $bg, $size, $weight) {
+@mixin button($color, $bg, $size, $weight, $border) {
   display: block;
   color: $color;
   text-transform: capitalize;
@@ -26,6 +26,7 @@
   border-radius: 5rem;
   border: none;
   cursor: pointer;
+  outline-offset: 0.125rem;
   background: $bg;
   font-weight: $weight;
   transition: 150ms ease;
@@ -37,5 +38,9 @@
   &:active {
     scale: 0.985;
     opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $border;
   }
 }

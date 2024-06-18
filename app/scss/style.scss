@@ -126,7 +126,8 @@ body {
       m.color(primary__bright-cyan)
     ),
     var(--step--1),
-    m.weight(bold)
+    m.weight(bold),
+    m.color(primary__lime-green)
   );
 }
 
@@ -334,10 +335,13 @@ body {
   #{&}__social-icons {
     display: flex;
     list-style: none;
-    justify-content: center;
-    gap: 1rem;
     padding: 0;
+    gap: 1rem;
     align-items: center;
+
+    @media screen and (width < 50rem) {
+      justify-content: center;
+    }
   }
 
   #{&}__social-icon {
