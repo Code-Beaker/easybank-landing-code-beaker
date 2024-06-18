@@ -134,10 +134,10 @@ body {
 .hero {
   #{&}__text-content {
     padding: 10rem 5rem;
-    order: 2;
 
     @media screen and (width < 50rem) {
       padding: 5rem 2.5rem;
+      order: 2;
       text-align: center;
     }
   }
@@ -160,7 +160,10 @@ body {
 
   #{&}__image-wrapper {
     position: relative;
-    order: 1;
+
+    @media screen and (width < 50rem) {
+      order: 1;
+    }
   }
 
   #{&}__pattern {
