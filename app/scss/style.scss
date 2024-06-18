@@ -26,14 +26,22 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @media screen and (width < 50rem) {
+      width: fit-content;
+    }
   }
 
   #{&}__toggle-btn {
-    display: block;
+    display: none;
     cursor: pointer;
     outline: none;
     border: none;
     background-color: transparent;
+
+    @media screen and (width < 50rem) {
+      display: block;
+    }
   }
 
   #{&}__links {
