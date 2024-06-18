@@ -25,10 +25,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: fit-content;
 
     @media screen and (width < 50rem) {
-      width: fit-content;
+      width: 100%;
     }
   }
 
