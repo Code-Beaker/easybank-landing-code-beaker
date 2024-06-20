@@ -4,17 +4,7 @@ This is a solution to the **Easybank Landing Page** challenge from [Frontend Men
 
 ## Preview
 
-### Default[MOBILE]
-
-![Mobile](image-1.png)
-
-### Expanded[MOBILE]
-
-![Mobile](image.png)
-
-### Desktop
-
-![desktop](image-2.png)
+![Preview Image](./easybank-landing-page-preview.jpg)
 
 ### Built with
 
