@@ -3,15 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
+  height: fit-content;
 }
 
 @mixin navlink($color, $wght, $size, $hover) {
   text-decoration: none;
   font-weight: $wght;
   color: $color;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: $size;
-  outline-offset: 0.125rem;
+  outline-offset: 0.1rem;
   display: block;
   transition: 150ms ease;
 
