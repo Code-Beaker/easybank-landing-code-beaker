@@ -13,15 +13,15 @@ let hidden = true;
 navtoggleButton.addEventListener("click", () => {
   if (hidden) {
     navigationLinks.classList.add("links-show");
-    navtoggleButton.classList.add("is-active");
     navToggleIcon.setAttribute("src", menuCloseIcon);
     hidden = false;
     toggleLabel.textContent = "Close";
   } else {
     navigationLinks.classList.remove("links-show");
-    // navtoggleButton.remove("is-active");
+    // navtoggleButton.remove("toggle-rotate");
     navToggleIcon.setAttribute("src", menuOpenIcon);
     hidden = true;
     toggleLabel.textContent = "Open";
   }
+  navToggleIcon.classList.toggle("toggle-rotate");
 });

@@ -43,7 +43,6 @@ body {
     font-weight: 500;
     border: none;
     background-color: transparent;
-    transition: width 200ms ease;
 
     &:focus,
     &:focus-visible {
@@ -53,6 +52,14 @@ body {
     @media screen and (width < 50rem) {
       display: flex;
     }
+  }
+
+  &__toggle-icon {
+    transition: 200ms ease;
+  }
+
+  .toggle-rotate {
+    rotate: 90deg;
   }
 
   #{&}__links {
