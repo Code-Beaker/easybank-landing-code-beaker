@@ -1,6 +1,7 @@
 import "./scss/style.scss";
 import "./typeScales.css";
 
+// Icons
 import menuOpenIcon from "./images/icon-hamburger.svg";
 import menuCloseIcon from "./images/icon-close.svg";
 
