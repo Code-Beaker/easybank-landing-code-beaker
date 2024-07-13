@@ -8,7 +8,8 @@ body {
 // navbar
 .navbar {
   @include m.navbar;
-  background-color: m.color(neutral__white);
+  background-color: hsla(from m.color(neutral__white) h s l / 0.95);
+  backdrop-filter: blur(0.5rem);
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +43,7 @@ body {
     font-weight: 500;
     border: none;
     background-color: transparent;
+    transition: width 200ms ease;
 
     &:focus,
     &:focus-visible {
@@ -333,7 +335,7 @@ body {
 
   #{&}__logo {
     margin-bottom: 3rem;
-    display: block;
+    display: inline-block;
 
     @media screen and (width < 50rem) {
       margin-inline: auto;
@@ -382,6 +384,7 @@ body {
       m.color(neutral__grayish-blue)
     );
     padding: 0.15rem;
+    display: inline-block;
 
     &:hover {
       color: m.color(neutral__grayish-blue);
