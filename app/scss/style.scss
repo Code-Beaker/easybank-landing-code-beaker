@@ -40,6 +40,16 @@ body {
   box-shadow: 0.15rem 0.15rem 1rem rgba(0, 0, 0, 0.1);
   z-index: 999;
 
+  &__brand {
+    outline-offset: 0.125rem;
+    display: block;
+    padding: 0.5rem;
+
+    &:focus {
+      outline: 0.125rem dotted m.color(primary__dark-blue);
+    }
+  }
+
   @media screen and (width < 50rem) {
     position: fixed;
     flex-direction: column;
@@ -70,7 +80,7 @@ body {
 
     &:focus,
     &:focus-visible {
-      outline: 0.125rem dashed currentColor;
+      outline: 0.125rem dotted currentColor;
     }
 
     @media screen and (width < 50rem) {
@@ -367,6 +377,12 @@ body {
   #{&}__logo {
     margin-bottom: 3rem;
     display: inline-block;
+    outline-offset: 0.125rem;
+    padding: 0.25rem;
+
+    &:focus-visible {
+      outline: 0.125rem dotted m.color(neutral__white);
+    }
 
     @media screen and (width < 50rem) {
       margin-inline: auto;
@@ -388,9 +404,16 @@ body {
 
   #{&}__social-icon {
     transition: 0.125s ease;
+    display: block;
+    padding: 0.25rem;
+    outline-offset: 0.125rem;
 
     &:hover {
       opacity: 0.75;
+    }
+
+    &:focus-visible {
+      outline: 0.125rem dotted m.color(neutral__white);
     }
   }
 
@@ -414,7 +437,7 @@ body {
       var(--step--1),
       m.color(neutral__grayish-blue)
     );
-    padding: 0.15rem;
+    padding: 0.25rem;
     display: inline-block;
 
     &:hover {
